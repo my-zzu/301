@@ -1,103 +1,279 @@
 <!DOCTYPE html>
 <html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>스타일가이드</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <script type="module" src="./js/common.js" defer></script>
+    <style>
+      body {
+        padding: 2rem;
+      }
+      hr {
+        margin: 5rem 0;
+      }
+    </style>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="../css/style.css">
-  <title>스타일가이드</title>
-</head>
+  <body>
+    <button class="btn lg blue">버튼</button>
+    <button class="btn md blue">버튼</button>
+    <button class="btn base blue">버튼</button>
+    <button class="btn sm blue">버튼</button>
+    <button class="btn xs blue">버튼</button>
+    <hr />
+    <button class="btn base blue">버튼</button>
+    <button class="btn base pink">버튼</button>
+    <button class="btn base black">버튼</button>
+    <button class="btn base blue2">버튼</button>
+    <button class="btn base gray">버튼</button>
+    <button class="btn base outline-blue">버튼</button>
+    <hr />
+    <h1>product-vertical</h1>
+    <ul class="product-vertical">
+      <li>
+        <a href=""><img src="../images/@product.png" alt="" /></a>
+      </li>
+      <li>
+        <a href=""><img src="../images/@product.png" alt="" /></a>
+      </li>
+      <li>
+        <a href=""><img src="../images/@product.png" alt="" /></a>
+      </li>
+      <li>
+        <a href=""><img src="../images/@product.png" alt="" /></a>
+      </li>
+    </ul>
+    <hr />
+    <h1>product-list</h1>
+    <ul class="product-list">
+      <li>
+        <a href="">
+          <div class="box-white product-list__thumb">
+            <img src="../images/@product2.png" alt="" />
+          </div>
+          <div class="text xs">Lorem ipsum dolor sit amet consectetur.</div>
+          <div class="product-list__price heading sm">$17,00</div>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <div class="box-white product-list__thumb">
+            <img src="../images/@product2.png" alt="" />
+          </div>
+          <div class="text xs">Lorem ipsum dolor sit amet consectetur.</div>
+          <div class="product-list__price heading sm">$17,00</div>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <div class="box-white product-list__thumb">
+            <img src="../images/@product2.png" alt="" />
+          </div>
+          <div class="text xs">Lorem ipsum dolor sit amet consectetur.</div>
+          <div class="product-list__price heading sm">$17,00</div>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <div class="box-white product-list__thumb">
+            <img src="../images/@product2.png" alt="" />
+          </div>
+          <div class="text xs">Lorem ipsum dolor sit amet consectetur.</div>
+          <div class="product-list__price heading sm">$17,00</div>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <div class="box-white product-list__thumb">
+            <img src="../images/@product2.png" alt="" />
+          </div>
+          <div class="text xs">Lorem ipsum dolor sit amet consectetur.</div>
+          <div class="product-list__price heading sm">$17,00</div>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <div class="box-white product-list__thumb">
+            <img src="../images/@product2.png" alt="" />
+          </div>
+          <div class="text xs">Lorem ipsum dolor sit amet consectetur.</div>
+          <div class="product-list__price heading sm">$17,00</div>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <div class="box-white product-list__thumb">
+            <img src="../images/@product2.png" alt="" />
+          </div>
+          <div class="text xs">Lorem ipsum dolor sit amet consectetur.</div>
+          <div class="product-list__price heading sm">$17,00</div>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <div class="box-white product-list__thumb">
+            <img src="../images/@product2.png" alt="" />
+          </div>
+          <div class="text xs">Lorem ipsum dolor sit amet consectetur.</div>
+          <div class="product-list__price heading sm">$17,00</div>
+        </a>
+      </li>
+    </ul>
+<h1>only-product</h1>
+    <ul class="only-product">
+      <li>
+        <a href="">
+          <div class="box-white product-list__thumb">
+            <img src="../images/@product2.png" alt="제품명" />
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <div class="box-white product-list__thumb">
+            <img src="../images/@product2.png" alt="제품명" />
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <div class="box-white product-list__thumb">
+            <img src="../images/@product2.png" alt="제품명" />
+          </div>
+        </a>
+      </li>
+    </ul>
+<h1>product-like</h1>
+    <ul class="product-like">
+      <li>
+        <a href="">
+          <div class="product-like__thumb">
+            <img src="../images/@product2.png" alt="" />
+          </div>
+          <div class="product-like__count">1780</div>
+          <div class="product-like__state">New</div>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <div class="product-like__thumb">
+            <img src="../images/@product2.png" alt="" />
+          </div>
+          <div class="product-like__count">1780</div>
+          <div class="product-like__state">New</div>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <div class="product-like__thumb">
+            <img src="../images/@product2.png" alt="" />
+          </div>
+          <div class="product-like__count">1780</div>
+          <div class="product-like__state">New</div>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <div class="product-like__thumb">
+            <img src="../images/@product2.png" alt="" />
+          </div>
+          <div class="product-like__count">1780</div>
+          <div class="product-like__state">New</div>
+        </a>
+      </li>
+    </ul>
 
-<body>
-<button class="btn lg blue">버튼</button>
-<button class="btn md pink">버튼</button>
-<button class="btn base gray">버튼</button>
-<button class="btn sm outline-blue">버튼</button>
-<button class="btn xs blue2">버튼</button>
+    <hr />
 
-<ul class="product-vertical">
-  <li>
-    <a href=""><img src="../imgs/product.svg" alt="" /></a><!--../images/@product.png-->
-  </li>
-  <li>
-    <a href=""><img src="../imgs/product.svg" alt="" /></a><!--../images/@product.png-->
-  </li>
-  <li>
-    <a href=""><img src="../imgs/product.svg" alt="" /></a><!--../images/@product.png-->
-  </li>
-  <li>
-    <a href=""><img src="../imgs/product.svg" alt="" /></a><!--../images/@product.png-->
-  </li>
-</ul>
+    <a href="" class="btn-more">See All </a>
 
-<ul class="product-list">
-  <li>
-    <a href="">
-      <div class="box-whith product-list__thumb">
-        <img src="../imgs/product-1.svg" alt="">
+    <hr />
+
+    <div class="profile-base">
+      <img src="../images/@product2.png" alt="" />
+    </div>
+    <div class="profile-sm">
+      <img src="../images/@product2.png" alt="" />
+    </div>
+
+    <hr />
+    <h3>round 크기</h3>
+    <input type="text" class="input base rounded-sm" value="rebehayan@gmail.com" /><br />
+    <input type="text" class="input base rounded-base" value="rebehayan@gmail.com" /><br />
+    <input type="text" class="input base" value="rebehayan@gmail.com" /><br />
+    <h3>input 크기</h3>
+    <input type="text" class="input sm" value="rebehayan@gmail.com" /><br />
+    <input type="text" class="input base" value="rebehayan@gmail.com" /><br />
+    <input type="text" class="input md" value="rebehayan@gmail.com" /><br />
+    <input type="text" class="input lg" value="rebehayan@gmail.com" /><br />
+    <h3>input 색상</h3>
+    <input type="password" class="input base blue" placeholder="Password" /><br />
+    <input type="password" class="input base" placeholder="Password" /><br />
+    <textarea class="input blue rounded-base" rows="4"></textarea>
+    <textarea class="input blue rounded-base lg" style="--height: 10rem"></textarea>
+    <br />
+    <br />
+    <input type="radio" class="radio" name="radio_group" id="radio1_1" checked /><label for="radio1_1">SMS</label><br />
+    <input type="radio" class="radio" name="radio_group" id="radio1_2" /><label for="radio1_2">Email </label>
+    <br />
+    <br />
+    <br />
+    <!-- <div class="banner">적립부터 결제까지, <br />치킨부터 와인까지</div> -->
+    <div class="phone">
+      <button>깃발</button>
+      <ul class="phone__list">
+        <li><button>깃발1</button></li>
+        <li><button>깃발2</button></li>
+        <li><button>깃발3</button></li>
+      </ul>
+      <input type="tel"  /> <!--name="" id="" data-xxx=""-->
+    </div>
+    <hr />
+    <button class="open-alert">경고창열기</button>
+    <dialog class="dialog alert">
+      <strong>We couldn't proceed<br />your payment</strong>
+      <p>Please, change your payment method or try again</p>
+      <button class="btn xs blue close-alert">Close</button>
+    </dialog>
+    <template>
+      WebComponent
+      <button class="btn xs blue close-alert">Close</button>
+    </template>
+    <hr />
+    <nav>
+      <ul class="tab-type1">
+        <li><button>All</button></li>
+        <li><button>10%</button></li>
+        <li class="--active"><button>20%</button></li>
+        <li><button>30%</button></li>
+        <li><button>40%</button></li>
+        <li><button>50%</button></li>
+      </ul>
+    </nav>
+    <div class="tab-content">
+      <div>all내용</div>
+      <div>10%내용</div>
+      <div>20%내용</div>
+      <div>30%내용</div>
+      <div>...</div>
+    </div>
+
+    <div class="half-circle"></div>
+
+    <hr />
+
+    <div class="gallery-box">
+      <div>
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
       </div>
-      <div class="test xs">Lorem ipsum dolor sit amet consectetur.</div>
-      <div class="product-list__price heading sm">$17,00</div>
-    </a>
-  </li>
-  <li>
-    <a href="">
-      <div class="box-whith product-list__thumb">
-        <img src="../imgs/Mask Group.svg" alt="">
-      </div>
-      <div class="test xs">Lorem ipsum dolor sit amet consectetur.</div>
-      <div class="product-list__price heading sm">$17,00</div>
-    </a>
-  </li>
-  <li>
-    <a href="">
-      <div class="box-whith product-list__thumb">
-        <img src="../imgs/product-3.svg" alt="">
-      </div>
-      <div class="test xs">Lorem ipsum dolor sit amet consectetur.</div>
-      <div class="product-list__price heading sm">$17,00</div>
-    </a>
-  </li>
-  <li>
-    <a href="">
-      <div class="box-whith product-list__thumb">
-        <img src="../imgs/product-1.svg" alt="">
-      </div>
-      <div class="test xs">Lorem ipsum dolor sit amet consectetur.</div>
-      <div class="product-list__price heading sm">$17,00</div>
-    </a>
-  </li>
-</ul>
-
-
-
-
-<ul class="product-list only-product">
-  <li>
-    <a href="">
-      <div class="box-whith product-list__thumb">
-        <img src="../imgs/product-1.svg" alt="">
-      </div>
-      <div class="test xs">Lorem ipsum dolor sit amet consectetur.</div>
-    </a>
-  </li>
-</ul>
-
-
-<ul class="product-like">
-  <li>
-    <a href="">
-      <div class="product-like__thumb">
-        <img src="../imgs/Mask Group.svg" alt="">
-      </div>
-      <div class="product-like__count">1780</div>
-      <div class="product-like__starte">New</div>
-    </a>
-  </li>
-</ul>
-
-
-
-</body>
-
+      Watch
+    </div>
+    <hr />
+    <input type="checkbox" class="toggle" id="chk1_1" /><label for="chk1_1"></label>
+  </body>
 </html>
