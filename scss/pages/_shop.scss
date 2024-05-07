@@ -7,11 +7,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: rem(30);
     margin: rem(12) rem(20) rem(12) rem(20);
-
 }
 
-input{
+.shop-input{
     font-size: rem(16);
     line-height: rem(36);
     border: none;
@@ -19,15 +19,29 @@ input{
     //background-color: $grayf8;
     color: $grayc7;
     text-indent: rem(20);
-    @include background ("shop/ico_01.svg", right center, $grayf8);/*안으로 들여 와야하는데요?*/
+    @include background ("shop/ico_01.svg", right rem(18) center, $grayf8);
 }
 
-.slide-wrap{
-    margin: rem(20) rem(20) rem(7) rem(20);
-    border-radius: rem(9);
-    overflow: hidden;
+.slidewrap{
+    display: grid;
+    justify-items: center;
     position: relative;
-    @include background ("shop/big-sale_img1.png")
+    border-radius: rem(9);
+    &::before{
+        @include background ("shop/big-sale-mask_img2.png", center);
+        @include position (a, left, 0, top, rem(-3));
+        content: "";
+        width: 100%;
+        height: 100%;
+        display: inline-block;
+        
+    }
+    .imgcontainer{
+        position: relative;
+    }
+    img{
+        border-radius: rem(9);
+    }
 }
 
 .slide_text4, 
@@ -55,21 +69,24 @@ input{
     line-height: rem(15);
     left: rem(18);
     top: rem(96);
+    z-index: 1;
 }
 .slide_text4 {
     font-size: rem(11);
     line-height: rem(15);
     left: rem(18);
     top: rem(111);
+    z-index: 1;
 }
 
 .indicator_wrap{
     display: flex;
     gap: rem(10);
     justify-content: center;
+    margin-top: rem(5);
     margin-bottom: rem(20);
 }
-.dot_bar {
+.dot.--active {
     width: rem(40);
     height: rem(10);
     border-radius: rem(5);
@@ -79,7 +96,8 @@ input{
 .dot1,
 .dot2,
 .dot3,
-.dot4 {
+.dot4,
+.dot5 {
     width: rem(10);
     height: rem(10);
     border-radius: 100%;

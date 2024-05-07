@@ -7,8 +7,8 @@ $textType: (
     "className": ".heading.xl",
     "fontSize": rem(50),
     "color": $black,
-    "fontWeight": 900,
-    "lineHeight": rem(31),
+    "fontWeight": 700,
+    "lineHeight": rem(61),
     "letterSpacing": null,
 
   ),
@@ -19,7 +19,7 @@ $textType: (
     "fontWeight": 700,
     "lineHeight": rem(36),
     "letterSpacing": rem(-0.28),
-    "margin": rem(20) 0,
+  
   ),
   3: (
     "className": ".heading.md",
@@ -28,7 +28,7 @@ $textType: (
     "fontWeight": 700,
     "lineHeight": rem(30),
     "letterSpacing": rem(-0.21),
-    "margin":0 rem(20) rem(20) ,
+
   ),
   4: (
     "className": ".heading.base",
@@ -126,7 +126,55 @@ $textType: (
     "lineHeight": rem(159),
     "letterSpacing": rem(-0.15),
   ),
+  16: (
+    "className": ".text.w30019",
+    "fontSize": rem(19),
+    "color": $gray20,
+    "fontWeight": 300,
+    "lineHeight": rem(33),
+    "letterSpacing": rem(0),
+  ),
+  17: (
+    "className": ".text.w30022",
+    "fontSize": rem(22),
+    "color": $grayf3,
+    "fontWeight": 300,
+    "lineHeight": rem(61),
+    "letterSpacing": rem(0),
+  ),
+  18: (
+    "className": ".text.w30015",
+    "fontSize": rem(15),
+    "color": $gray20,
+    "fontWeight": 300,
+    "lineHeight": rem(61 ),
+    "letterSpacing": rem(0),
+  ),
+  19: (
+    "className": ".text.w3001526",
+    "fontSize": rem(15),
+    "color": $gray20,
+    "fontWeight": 300,
+    "lineHeight": rem(26),
+    "letterSpacing": rem(0),
+  ),
+  20: (
+    "className": ".heading.xxl",
+    "fontSize": rem(51),
+    "color": $gray20,
+    "fontWeight": 700,
+    "lineHeight": rem(54),
+    "letterSpacing": rem(-0.5),
 
+  ),
+  21: (
+    "className": ".text.w3001927",
+    "fontSize": rem(19),
+    "color": $black,
+    "fontWeight": 300,
+    "lineHeight": rem(27),
+    "letterSpacing": rem(0),
+  ),
 );
 
 $textLength: list.length($textType);

@@ -1,0 +1,79 @@
+@use  "../abstracts/" as *;
+@use "../components/" as *;
+@use "../base/" as *;
+
+
+
+.statusbar{background-color: transparent;
+    box-shadow: rem(1) rem(1) rem(3) rgba(141, 141, 141, 0.1);
+    height: 44px;
+    width: rem(375);
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;//background-image: url(../../imgs/start/statusbar.png);
+    @include background("start/statusbar.png", transparent);
+}
+
+// .shoppe-main{
+//     // display: flex;
+//     // flex-direction: column;
+// }
+.start__thumb{
+    height: rem(345);
+//     display: flex;
+//     justify-content: center;
+     //align-items: end;
+     position: relative;
+//     margin-top: rem(188);
+     img{
+         position: relative;
+     }
+     &::before{
+        content: "";
+        width: rem(134);
+        height: rem(134);
+        display: inline-block;
+        border-radius: 100%;
+        box-shadow: rem(5) rem(5) rem(10) rgba(141, 141, 141, 0.475);
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translate(-50%, 26px);
+        //filter: drop-shadow(rem(5) rem(5) rem(10) rgba(141, 141, 141, 0.475));
+    }
+ }
+
+.main__title{
+    margin-top: rem(45);
+    font-family: $english2;
+}
+.sub__text{
+    margin-top: rem(18);
+    padding: 0 rem(63);
+    text-align: center;
+}
+.shoppe-btn{
+    padding: rem(106) rem(20) 0 rem(20);
+     a{
+        display: flex;
+        justify-content: center;
+        border-radius: rem(16);
+    }                        
+}
+.alreadyaccount{
+    margin-top: rem(18);
+    margin-bottom: rem(55);
+    text-align: center;
+    //vertical-align: baseline;
+    &::after{
+            content: "";
+            display: inline-block;
+            width: rem(30);
+            height: rem(30);
+            margin-left: rem(10);
+            border-radius: 100%;
+            background: url(../../imgs/1/Arrow.svg) no-repeat center $blue2;
+            vertical-align: rem(-5);
+        }
+ }

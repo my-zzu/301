@@ -37,10 +37,13 @@
 
 /*------------------------------- my-orders -----------------------------------*/
 
+
+
 .my-order-list {
-    display: inline-flex;
+    display: flex;
     gap: rem(13);
-    margin: rem(20) 0 rem(20) rem(20);
+    justify-content: space-between;
+    margin: rem(20) rem(20) rem(20) rem(20);
     overflow-x: auto;
     overflow-y: hidden;
 }
@@ -48,19 +51,15 @@
 /*------------------------------- Stories(product-vertical) -----------------------------------*/
 
 
+
 .Stories{
-    margin: rem(20) 0 rem(20) rem(20);
-    //@include scroll(b, rem(3), $yellowfe, null);
-    .Stories::-webkit-scrollbar {
-        background-color: #fee375;
-        height: 0.5rem;
-        margin-top: 2rem;
-    }
-    .Stories::-webkit-scrollbar-thumb {
-        background-color: #f9d000;
-        border-radius: 30px;
-    }
+    //scroll
+    @include scroll(b, rem(3), transparent, null);    
+    margin: rem(20) 0 0 rem(20);
+    overflow-x: auto;
+
     &>li{
+        //play
         position: relative;
         &::before{
             content: "";
@@ -103,56 +102,11 @@
 /*------------------------------- New Items -----------------------------------*/
 
 
-.new-items_title{
-    display: flex;
-    justify-content:space-between;
-    align-items: center;
-    padding-right: rem(20);
-}
-
-
-
-
-.new-items_wrap{
-    display: flex;
-    gap: rem(6);
-    margin-left: rem(20);
-    padding-bottom: rem(20);
+.product-list{
+    //scroll
+    @include scroll(b, rem(3), transparent, null);    
+    margin: rem(20) 0 0 rem(20);
     overflow-x: auto;
-    @include scroll(b, rem(3), $yellowfe, null);
-    .new-items_wrap::-webkit-scrollbar {
-        margin-top: 2rem;
-    }
-
-    .new-items_card {
-//     width: rem(402);
-//    // height: ;
-//     overflow: hidden;
-         .new-items_card_img{
-            background-color: $white;
-                width: rem(130);
-                height: rem(130);
-                padding: rem(5);
-                display: block;
-                overflow: hidden;
-                border-radius: rem(9);
-                filter: drop-shadow(rem(5) rem(5) rem(10) rgba(141, 141, 141, 0.475));
-
-             img{
-                 width: rem(130);
-                 height: rem(130);
-                 border-radius: rem(5);
-                 object-fit:cover;
-
-            }
-        }
-        .new-items_text{
-            margin-top: rem(6);
-            .new-items_text2{
-                font-family: $english2;
-            }
-        }
-    }
 }
 
 
@@ -163,67 +117,71 @@
 
 .Most-Popular_title{
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
     align-items: center;
     padding-right: rem(20);
 }
-
-.Most-Popular_wrap{
-    display: flex;
-    gap: rem(6);
-    margin-left: rem(20);
-    padding-bottom: rem(20);
+.product-like{
+    //scroll
+    @include scroll(b, rem(3), transparent, null);    
+    margin: rem(20) 0 0 rem(20);
     overflow-x: auto;
-    @include scroll(b, rem(3), $yellowfe, null);
-    .Most-Popular_wrap::-webkit-scrollbar {
-        margin-top: rem(20);               /*-----card와 scroll과 사이의 간격을 벌려 주고 싶은데요ㅜㅜ-----*/
-    }
+}
 
-    .Most-Popular_card {
-//     width: rem(402);
-//    // height: ;
-//     overflow: hidden;
-         .Most-Popular_card_img{
-            background-color: $white;
-                width: rem(93);
-                height: rem(140);
-                padding: rem(5);
-                display: block;
-                overflow: hidden;
-                border-radius: rem(9);
-                filter: drop-shadow(rem(5) rem(5) rem(10) rgba(141, 141, 141, 0.475));
 
-             img{
-                 width: rem(93);
-                 height: rem(104);
-                 border-radius: rem(5);
-                 object-fit:cover;
+// .Most-Popular_wrap{
+//     display: flex;
+//     gap: rem(6);
+//     margin-left: rem(20);
+//     padding-bottom: rem(20);
+//     overflow-x: auto;
+//     @include scroll(b, rem(3), transparent, null);
+//     .Most-Popular_wrap::-webkit-scrollbar {
+//         //margin-top: rem(20);               /*-----card와 scroll과 사이의 간격을 벌려 주고 싶은데요ㅜㅜ-----*/
+//     }
+
+//     .Most-Popular_card {//li
+// //     width: rem(402);
+// //    // height: ;
+// //     overflow: hidden;
+//         .Most-Popular_card_img{//a
+//             background-color: $white;
+//                 width: rem(93);
+//                 height: rem(140);
+//                 padding: rem(5);
+//                 display: block;
+//                 overflow: hidden;
+//                 border-radius: rem(9);
+//                 filter: drop-shadow(rem(5) rem(5) rem(10) rgba(141, 141, 141, 0.475));
+
+//              img{
+//                  width: rem(93);
+//                  height: rem(104);
+//                  border-radius: rem(5);
+//                  object-fit:cover;
                 
 
-            }
-        }
-        .Most-Popular_text{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-top: rem(6);
-            .Most-Popular_text2{
-                font-family: $english2;
-                .icon-heart{
-                    display: inline-block;
-                }
-                &::after{
-                    content: "";
-                    width: rem(10.45);
-                    height: rem(13);
-                    display: inline-block;
-                    //background: url(../imgs/MostPopular/Icon-heart.svg) no-repeat center cover;
-                    @include background ("MostPopular/Icon-heart.svg");
-                }
-            }
-        }
-    }
-}
+//             }
+//         }
+//         .Most-Popular_text{//p
+//             display: flex;
+//             justify-content: space-between;
+//             align-items: center;
+//             margin-top: rem(6);
+//             .Most-Popular_text2{//strong
+//                 font-family: $english2;
+//                 &::after{
+//                     content: "";
+//                     width: rem(10.45);
+//                     height: rem(13);
+//                     display: inline-block;
+//                     //background: url(../imgs/MostPopular/Icon-heart.svg) no-repeat center cover;
+//                     @include background ("MostPopular/Icon-heart.svg");
+//                 }
+//             }
+//         }
+//     }
+// }
 
 
 
@@ -247,14 +205,19 @@
     margin-bottom: rem(20);
     padding-right: rem(20);
     .categories_card {
-            background-color: $white;
-            width: rem(155);
-            height: rem(182);
-            padding: rem(5);
-            display: block;
-            overflow: hidden;
-            border-radius: rem(9);
-            filter: drop-shadow(rem(5) rem(5) rem(10) rgba(141, 141, 141, 0.475));
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: rem(6);
+        background-color: $white;
+        width: 100%;
+        height: 100%;
+        padding: rem(5);
+        display: block;
+        overflow: hidden;
+        border-radius: rem(9);
+        box-sizing: border-box;
+        filter: drop-shadow(rem(5) rem(5) rem(10) rgba(141, 141, 141, 0.475));
 
          .categories_card_img{
             display: grid;
@@ -262,8 +225,8 @@
             gap: rem(6);
             overflow: hidden;
              img{
-                 width: rem(75);
-                 height: rem(75);
+                 width: 100%;
+                 height: 100%;
                  border-radius: rem(5);
                  object-fit:cover;
                  overflow: hidden;
@@ -301,9 +264,10 @@
     display: flex;
     justify-content:space-between;
     align-items: center;
-    padding-right: rem(20);
+    
     p{
         position: relative;
+        padding-right: rem(20);
        &::before{
         content: "";
         display: inline-block;
@@ -312,7 +276,7 @@
         //background: url(../imgs/Categories/icon_clock.svg) no-repeat center cover;
         @include background ("Categories/icon_clock.svg");
         position: absolute;
-        top: rem(7);
+        top: rem(0);
         left: rem(-23);
         }
         strong{
@@ -330,28 +294,23 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: rem(6);
-    margin-left: rem(20);
-    margin-bottom: rem(20);
-    padding-right: rem(20);
+padding: rem(20);
+    box-sizing: border-box;
     .Flash-Sale_card {
-            background-color: $white;
-            width: rem(99);
-            height: rem(103);
-            padding: rem(5);
             display: block;
             overflow: hidden;
-            border-radius: rem(9);
+            box-sizing: border-box;
             filter: drop-shadow(rem(5) rem(5) rem(10) rgba(141, 141, 141, 0.475));
-
          .Flash-Sale_card_img{
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: rem(6);
+
             position: relative;
             img{
-                 width: rem(99);
-                 height: rem(103);
+                 width: 100%;
+                 height: 100%;
+                 aspect-ratio: 1/1;
+                 border: solid rem(5) $white;
                  border-radius: rem(5);
+                 box-sizing: border-box;
                  object-fit:cover;
             }
             span{
@@ -359,7 +318,7 @@
                 border-radius: rem(5);
                 color: $white;
                 background: linear-gradient(to right, $pinkf8, $pink);
-                @include position (a, right, 0, top, 0);
+                @include position (a, right, rem(5), top, rem(5));
             }
         }
         .Flash-Sale_text{
@@ -402,33 +361,37 @@
     grid-template-columns: repeat(2, 1fr);
     gap: rem(6);
     margin: rem(0) rem(20) rem(20) rem(20);
-    //margin-bottom: rem(20);
+
     .just-for-you_card {
-//     width: rem(402);
-//    // height: ;
-//     overflow: hidden;
-         .just-for-you_card_img{
-            background-color: $white;
-                width: rem(155);
-                height: rem(171);
-                padding: rem(5);
+        width: 100%;
+        //height: ;
+        overflow: hidden;
+        filter: drop-shadow(rem(5) rem(5) rem(10) rgba(141, 141, 141, 0.475));
+
+        .just-for-you_card_img{
+           
+                // width: 100%;
+                // height: 100%;
                 display: block;
                 overflow: hidden;
-                border-radius: rem(9);
-                filter: drop-shadow(rem(5) rem(5) rem(10) rgba(141, 141, 141, 0.475));
-
+                
              img{
-                 width: rem(155);
-                 height: rem(171);
+                 width: 100%;
+                 height: 100%;
+                 //aspect-ratio: 1/1;
+                 border: solid rem(5) $white;
                  border-radius: rem(5);
+                 box-sizing: border-box;
                  object-fit:cover;
-
+                overflow: hidden;
             }
-        }
-        .just-for-you_text{
-            margin-top: rem(6);
+        
+            .just-for-you_text1{
+                margin: rem(6) rem(5) rem(5) rem(5);
+            }
             .just-for-you_text2{
                 font-family: $english2;
+                margin-left: rem(5);
             }
         }
     }
@@ -446,74 +409,89 @@
     align-items: center;
     background-color: #fff;
     border-top: 1px solid #cccccc28;
-    position: sticky;
+    position: fixed;
     bottom: rem(15);
     left: 0;
     right: 0;
     z-index: 5;
     //filter: drop-shadow(rem(5) rem(5) rem(10) rgba(141, 141, 141, 0.475));
     li{
-        width: rem(24);
-        height: rem(30);
-        //padding: rem(1);
-
+        flex: 1;
+        a{
+            display: block;
+            padding: rem(15) 0 ;
+            text-align: center;
+            @for $i from 1 to 6{
+            &.icon#{$i}::after{
+                @include background("ButtomBar/ico#{$i}.svg");
+                //background: url(../images/) no-repeat center top;
+                content: "";
+                width: rem(24);
+                height: rem(30);
+                display: inline-block;
+            }
+            &.icon#{$i}.--active::after{
+                @include background("ButtomBar/ico#{$i}_b.svg");
+                //background: url(../images/) no-repeat center top;
+            }
+        }
     }
-}
+}}
 
-.icon1::after {
-    @include background("ButtomBar/ico-home.svg");
-    content: "";
-    width: rem(24);
-    height: rem(24);
-    display: block;
-    margin-top: rem(3);
-}
-.icon2::after {
-    @include background("ButtomBar/ico-heart.svg");
-    content: "";
-    width: rem(24);
-    height: rem(24);
-    display: block;
-    margin-top: rem(5);
-    margin-left: rem(1);
-}
-.icon3::after {
-    @include background("ButtomBar/ico-categories.svg");
-    content: "";
-    width: rem(24);
-    height: rem(24);
-    display: block;
-    margin-top: rem(4);
-    margin-left: rem(1);
-}
-.icon4::after {
-    @include background("ButtomBar/ico-cart.svg");
-    content: "";
-    width: rem(24);
-    height: rem(24);
-    display: block;
-    margin-top: rem(3);
-}
-.icon5::after {
-    @include background("ButtomBar/ico-community.svg");
-    content: "";
-    width: rem(24);
-    height: rem(30);
-    display: block;
-}
-.icon6::after {
-    @include background("ButtomBar/ico-community.svg");
-    content: "";
-    width: rem(24);
-    height: rem(24);
-    display: block;
-}
+// .icon1::after {
+//     @include background("ButtomBar/ico-home.svg");
+//     content: "";
+//     width: rem(24);
+//     height: rem(24);
+//     display: block;
+//     margin-top: rem(3);
+// }
+// .icon2::after {
+//     @include background("ButtomBar/ico-heart.svg");
+//     content: "";
+//     width: rem(24);
+//     height: rem(24);
+//     display: block;
+//     margin-top: rem(5);
+//     margin-left: rem(1);
+// }
+// .icon3::after {
+//     @include background("ButtomBar/ico-categories.svg");
+//     content: "";
+//     width: rem(24);
+//     height: rem(24);
+//     display: block;
+//     margin-top: rem(4);
+//     margin-left: rem(1);
+// }
+// .icon4::after {
+//     @include background("ButtomBar/ico-cart.svg");
+//     content: "";
+//     width: rem(24);
+//     height: rem(24);
+//     display: block;
+//     margin-top: rem(3);
+// }
+// .icon5::after {
+//     @include background("ButtomBar/ico-community.svg");
+//     content: "";
+//     width: rem(24);
+//     height: rem(30);
+//     display: block;
+// }
+// .icon6::after {
+//     @include background("ButtomBar/ico-community.svg");
+//     content: "";
+//     width: rem(24);
+//     height: rem(24);
+//     display: block;
+// }
 
 .bar{
-    background-color: #fff;
+    background-color: $white;
     display: flex;
     justify-content: center;
-    position: sticky;
+    position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
@@ -527,5 +505,29 @@
         padding: rem(5) 0;
 
 
+    }
+}
+footer{
+    position: relative;
+}
+
+.page_more-ico{margin-top: rem(20);
+    width: rem(50);
+    height: rem(50);
+    border-radius: 100%;
+    background-color: rgba(70, 115, 238, 0.664);
+    box-shadow: inset 3px 3px 5px rgba(1, 16, 80, 0.493);
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    img{
+        width: 50%;
+        height: 50%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        
     }
 }

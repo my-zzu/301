@@ -15,7 +15,7 @@
     .btn.#{$class}{
         color: $color;
         background-color: $bgColor;
-       // border-radius: rem($radius);
+        //border-radius: rem($radius);
         @if ($borderWidth != null){
              border: $borderWidth solid $borderColor;
         }

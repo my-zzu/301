@@ -7,15 +7,17 @@
 @include buttonSize(base, 40, 14, 20);
 @include buttonSize(sm, 35, 13, 26);
 @include buttonSize(xs, 30, 10, 20);
+@include buttonSize(lg22, 61, 22, 31);
+
 
 //$class, $color, $bgColor, $borderWidth:null,$borderColor:null/*, $radius*/
-@include buttonColor(blue, $white, $blue/*, null*/);
-@include buttonColor(pink, $white, $pink/*, null*/);
-@include buttonColor(black, $white, $gray20/*, null*/);
-@include buttonColor(blue2, $blue2, $bluee5/*, null*/);
-@include buttonColor(gray, $black, $graye7/*, null*/);
-@include buttonColor("outline-blue", $blue, $white, rem(2), $blue/*, null*/);
-@include buttonColor("-blue", $blue, $white, rem(2), $blue/*, null*/);
+@include buttonColor(blue, $white, $blue);
+@include buttonColor(pink, $white, $pink);
+@include buttonColor(black, $white, $gray20);
+@include buttonColor(blue2, $blue2, $bluee5);
+@include buttonColor(gray, $black, $graye7);
+@include buttonColor("outline-blue", $blue, $white, rem(2), $blue);
+@include buttonColor("-blue", $blue, $white, rem(2), $blue);
 
 
 

@@ -1,0 +1,166 @@
+@use  "../abstracts/" as *;
+@use "../components/" as *;
+@use "../base/" as *;
+
+html{
+    overflow-x: hidden;
+}
+.create-account__body{
+    display: grid;
+    justify-items: center;
+    position: relative;
+
+    // .create-account__bg-1{
+    //     position: absolute;
+    //     left: 0;
+    //     top: 0;
+    //     transform: translate(-30%, -43%);
+    //     z-index: -1;
+    // }
+    // .create-account__bg-2{
+    //     position: absolute;
+    //     right: 0;
+    //     top: 0;
+    //     transform: translate(60%, 15%);
+    //     z-index: -1;
+    // }
+
+    &::before{
+        @include background ("create-account/bg-bubble-skyblue.svg");
+        content: "";
+        width: rem(375);
+        height: rem(375);
+        display: inline-block;
+        transform: translate(-20%, -42%);
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: -1;
+    }
+    &::after{
+        @include background ("create-account/bg-bubble-blue.svg");
+        content: "";
+        width: rem(270);
+        height: rem(270);
+        display: inline-block;
+
+        transform:translate(63%, 15%) ;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: -1;
+    }
+}
+
+.create-account__Cancel,
+.create-account__btn,
+.input__container{
+    display: grid;
+    // flex-direction: column;
+    // justify-content: center;
+    gap: rem(6);
+    margin: 0 rem(20);
+}
+.create-account__title{
+    font-family: $english2;
+    padding: 0 rem(20);
+    margin-top: rem(122);
+}
+.porfile-poto{
+    padding-top: rem(52);
+    padding-bottom: rem(32);
+}
+// .phone{
+//     width: 100%;
+// }
+input{
+    display: block;
+    &.tel-type1,
+    &.password-type1,
+    &.email-type1{
+   
+        font-size: rem(13.83);
+        line-height: 1.4;
+        width: 100%;
+        height: rem(52.37);
+        border: none;
+        border-radius: rem(27);
+        background-color: $grayf8;
+        text-indent: rem(20);
+        &::placeholder{
+            color: $grayd2;
+            
+        }
+    }
+    &.tel-type1::placeholder{
+        padding-left: rem(85);
+        
+    }
+}
+.password{
+    position: relative;
+    display: flex;
+    .btn-passwordeye{
+        position: absolute;
+        right: rem(20);
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .btn-passwordeye:hover{
+        opacity: .5;
+    
+    }
+}
+.create-account__btn{
+    margin: 0 rem(20);
+    border-radius: rem(16);
+    margin-top: rem(52.1);
+    text-align: center;
+}
+
+.create-account__Cancel{
+    margin: 0 rem(20);
+    margin-top: rem(10);
+    text-align: center;
+}
+.phone{
+    position: relative;
+
+    .tel-type1__thumb{
+        position: absolute;
+        left: rem(20);
+        top: 50%;
+        transform: translateY(-50%);
+        padding-top: rem(2);
+    
+        &::after{
+            @include background ("create-account/icon_arrow-down.svg");
+            content: "";
+            display: inline-block;
+            width: rem(16);
+            height: rem(16);
+            padding-bottom: rem(1.5);
+            //margin-left: rem(6);
+            padding-right: rem(11);
+        }
+        &::before{
+            content: "";
+            display: inline-block;
+            width: rem(1);
+            height: rem(24);
+            background-color: $gray1f;
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: 1;
+        }
+    }
+}
+
+
+.phone__list{
+    display: none;
+    position: absolute;
+    left: rem(40);
+    top: 76%;
+}

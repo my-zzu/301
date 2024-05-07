@@ -1,0 +1,75 @@
+@use  "../abstracts/" as *;
+@use "../components/" as *;
+@use "../base/" as *;
+
+html{
+    display: grid;
+    position: relative;
+    
+    .bg{
+
+        .bg-big-bubble__blue{
+            position: absolute;
+            transform: translate(-30%, -34%);
+            left: 0;
+            top: 0;
+            z-index: -1;
+        }
+        .bg-big-bubble__lightblue{
+            position: absolute;
+            transform: translate(43%, 22%);
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+        }
+        .bg-small-bubble__blue{
+            position: absolute;
+            transform: translate(50%, 180%);
+            right: 0;
+            top: 0;
+            z-index: -1;
+        }
+    }
+}
+.login__title{
+    margin-top: rem(438);
+    padding: 0 rem(20);
+
+}
+.sub__title{
+    margin-top: rem(4);
+    padding: 0 rem(20);
+    &::after{
+        content: "";
+        width: rem(16);
+        height: rem(16);
+        margin-left: rem(5);
+        display: inline-block;
+        @include background ("login/icon_heart_black.svg", center);
+    }
+}
+.login__grid{
+    display: grid;
+    justify-items: center;
+    margin-top: rem(17.08);
+    padding: 0 rem(20);
+}
+
+.login__btn{
+    font-family: $english;
+    font-size: 22px;
+    //font-weight:100;
+    color: $grayf3;
+    line-height: 61px;
+    background-color: $blue;
+    border-radius: rem(16);
+    width:100%;
+    margin-top: rem(36.4);
+}
+.login__Cancel{//border: solid 1px #333;
+    width: 100%;
+    font-size: 22px;
+    line-height: 61px;
+    color: $gray20;
+    font-family: $english;
+}

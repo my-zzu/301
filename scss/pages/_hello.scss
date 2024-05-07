@@ -1,0 +1,91 @@
+@use  "../abstracts/" as *;
+@use "../components/" as *;
+@use "../base/" as *;
+
+.bg-hello{
+//position: relative;
+    .bg-group{
+        position: absolute;
+        transform: translate(-30%, -34%);
+        left: 0;
+        top: 0;
+        z-index: -1;
+    }
+}
+.hello-main{
+    display: grid;
+    justify-items: center;
+}
+.hello__porfile{
+    @include profile(91, 7);
+    margin-top: rem(149);
+
+}
+.hello__title{
+    margin-top: rem(28); 
+}
+.hello-sub__title{
+    margin-top: rem(30);
+    margin-bottom: rem(23);
+    text-align: center;
+}
+.input-text_type1{
+    display: flex;
+    gap: rem(5);
+}
+.input-textbox{
+    width: rem(50);
+    height: rem(50);
+    border: none;
+    background-color: $grayf8;
+    border-radius: rem(10.11);
+    font-size: rem(25);
+    text-align: center;
+    color: $grayd2;
+}
+
+.hello-you{
+    text-align: center;
+    margin-top: rem(256.44);
+    
+    &::after{
+        content: "";
+        display: inline-block;
+        width: rem(30);
+        height: rem(30);
+        margin-left: rem(10);
+        border-radius: 100%;
+        background: url(../../imgs/1/Arrow.svg) no-repeat center $blue2;
+        vertical-align: rem(-5);
+    }
+}
+.pagnation{
+    display: flex;
+    gap: rem(5);
+    justify-content: center;
+    ol{
+        display: flex;
+        gap: rem(5);
+    }
+    .w-6.h-6{
+        width: rem(24);
+        height: rem(24);
+    }
+    .pagnation-list{
+        border: none;
+        background-color: $grayc7;
+        width: rem(24);
+        font-weight: bold;
+        font-size: rem(18);
+        line-height: rem(24);
+        text-align: center;
+        border-radius: rem(5);
+        cursor: pointer;
+        &.--active{
+            color: #000;
+        }
+    }
+}
+
+
+

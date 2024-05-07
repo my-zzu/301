@@ -1,7 +1,7 @@
 //@use "../../abstracts/" as *;
 
 
-// @mixin after($width, $height, $radius, $margin){
+// @mixin after($width, $height, $radius: null, $margin){
 //     content: "";
 //     width: $width;
 //     height: $height;
